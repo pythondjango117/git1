@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: aqua;
+    font-size: 19px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.container{
+    width: 90%;
+    margin: 20px auto;
+}
+
+.contact-box{
+    background-color: aliceblue;
+    display: flex;
+}
+
+.contact-left{
+    flex-basis: 60%;
+    padding: 40px 60px;
+}
+
+.contact-right{
+    flex-basis: 40%;
+    padding: 40px;
+    background-color: antiquewhite;
+}
+
+h1{
+    margin-bottom: 5px;
+}
+
+.container p{
+    margin-bottom: 20px;
+}
+
+.input-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 13px;
+}
+
+.input-row  .input-group{
+    flex-basis: 35%;
+}
+
+input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+}
+
+textarea{
+    width: 100%;
+    border: 1px solid #ccc;
+    outline: 10px;
+}
+
+button{
+    background: #1c00b5;
+    width: 100px;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+tr td:first-child{
+    padding-right: 5px;
+}
+
+tr td:first-child{
+    padding-top: 10px;
+}
