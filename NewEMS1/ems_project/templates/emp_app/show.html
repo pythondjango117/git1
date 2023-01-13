@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>SHOW EMPLOYEES</title>
+{% endblock %}
+
+{% block content %}
+<table class="table table-striped">
+  <thead>
+    <tr>
+        <th>FIRST NAME</th>
+        <th>LAST NAME</th>
+        <th>DEPARTMENT</th>
+        <th>ROLE</th>
+        <th>SALARY</th>
+        <th>BONUS</th>
+        <th>MOBILE No.</th>
+        <th>PDF</th>
+        <th>HIRED DATE</th>
+        <th class="pl-5">ACTION</th>
+    </tr>
+  </thead>
+    <tbody>
+    {% for i in data %}
+    <tr>
+        <td>{{i.first_name}}</td>
+        <td>{{i.last_name}}</td>
+        <td>{{i.dept}}</td>
+        <td>{{i.role}}</td>
+        <td>{{i.salary}}</td>
+        <td>{{i.bonus}}</td>
+        <td>{{i.phone}}</td>
+        <td>{{i.pdf}}</td>
+        <!-- <td><a id="downloadLink" href="Python Developer.pdf" target="_blank" download>{{i.file}}</a></td> -->
+        <td>{{i.Date_of_joining}}</td>
+        <td>
+            <a href="{% url 'update_url' i.id %}"><button class="btn btn-secondary">UPDATE</button></a>
+            <a href="{% url 'delete_url' i.id %}"><button class="btn btn-danger">DELETE</button></a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

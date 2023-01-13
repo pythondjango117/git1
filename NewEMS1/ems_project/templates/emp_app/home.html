@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+<title>EMPLOYEE PAGE</title>
+{% endblock %}
+
+{% block content %}
+<div class="container jumbotron">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form|crispy}}
+        <!-- <input type="file" value="Upload File" class="form-control"> -->
+        <input type="submit" value="Add EMPLOYEE" class="btn btn-success btn-lg">
+        <input type="reset" value="CLEAR" class="btn btn-warning btn-lg float-right">
+    </form>
+</div>
+{% endblock %}
